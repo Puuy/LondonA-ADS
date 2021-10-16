@@ -23,7 +23,7 @@ client.on("ready", () => {
   client.user.setActivity(`London A , Ads`);
   client.user.setStatus("idle");
 });
-const owners = ["890685796774989854" , ]
+const owners = ["890685796774989854" , "693463762404900864" , ]
 var prefix = "-"; 
 
 client.on("message", async message => {
