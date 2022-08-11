@@ -1,5 +1,3 @@
-
-
 const Discord = require("discord.js");
 //require('dotenv').config()
 const client = new Discord.Client();
@@ -20,10 +18,10 @@ const humanizeDuration = require("humanize-duration");
 
 client.on("ready", () => {
   console.log(`Logged in as : ${client.user.username}`);
-  client.user.setActivity(`London A , Ads`);
+  client.user.setActivity(`Puuy the best`);
   client.user.setStatus("idle");
 });
-const owners = ["890685796774989854" , "693463762404900864" , "898579729823723610" , "758263740348497961" , "888718803859566602" , "380780683343429653" , "902340540958392350" , "380780683343429653","841847648113917993" , ]
+const owners = ["455108784579149835", "527826654660132890", "512792862140923905"]
 var prefix = "-"; 
 
 client.on("message", async message => {
@@ -264,8 +262,12 @@ number1++
     };    
     if (me.content.startsWith(prefix+"setname1")) {
       if(!args) return me.reply(`**${prefix}setname1 [name]**`)
-    await client2.user.setUsername(args)
+    await client2.user.setUsername(args).catch(err => {
+      return message.channel.send(
+        "لا يمكن تغيير الاسم فالوقت الحالي"
+      );
     me.channel.send(`تم تغير اسم الى ${args}`)
+    })
     }
     if (me.content.startsWith(prefix+"setavt1")) {
       if(!args) return me.reply(`**${prefix}setavt1 [avatar URL]**`)
@@ -346,8 +348,12 @@ number1++
         };  
         if (me.content.startsWith(prefix+"setname2")) {
           if(!args) return me.reply(`**${prefix}setname2 [name]**`)
-        await client3.user.setUsername(args)
+        await client3.user.setUsername(args).catch(err => {
+      return message.channel.send(
+        "لا يمكن تغيير الاسم فالوقت الحالي"
+      );
         me.channel.send(`تم تغير اسم الى ${args}`)
+        })
         }
         if (me.content.startsWith(prefix+"setavt2")) {
           if(!args) return me.reply(`**${prefix}setavt2 [avatar URL]**`)
@@ -427,8 +433,12 @@ number1++
             };    
             if (me.content.startsWith(prefix+"setname3")) {
               if(!args) return me.reply(`**${prefix}setname3 [name]**`)
-            await client4.user.setUsername(args)
+            await client4.user.setUsername(args).catch(err => {
+      return message.channel.send(
+        "لا يمكن تغيير الاسم فالوقت الحالي"
+      );
             me.channel.send(`تم تغير اسم الى ${args}`)
+            })
             }
             if (me.content.startsWith(prefix+"setavt3")) {
               if(!args) return me.reply(`**${prefix}setavt3 [avatar URL]**`)
@@ -508,8 +518,12 @@ number1++
                 };   
                 if (me.content.startsWith(prefix+"setname4")) {
                   if(!args) return me.reply(`**${prefix}setname4 [name]**`)
-                await client5.user.setUsername(args)
+                await client5.user.setUsername(args).catch(err => {
+      return message.channel.send(
+        "لا يمكن تغيير الاسم فالوقت الحالي"
+      );
                 me.channel.send(`تم تغير اسم الى ${args}`)
+                })
                 }
                 if (me.content.startsWith(prefix+"setavt4")) {
                   if(!args) return me.reply(`**${prefix}setavt4 [avatar URL]**`)
@@ -585,8 +599,12 @@ number1++
                     })
                     if (me.content.startsWith(prefix+"setname5")) {
                       if(!args) return me.reply(`**${prefix}setname5 [name]**`)
-                    await client6.user.setUsername(args)
+                    await client6.user.setUsername(args).catch(err => {
+      return message.channel.send(
+        "لا يمكن تغيير الاسم فالوقت الحالي"
+      );
                     me.channel.send(`تم تغير اسم الى ${args}`)
+                    })
                     }
                     if (me.content.startsWith(prefix+"setavt5")) {
                       if(!args) return me.reply(`**${prefix}setavt5 [avatar URL]**`)
@@ -609,4 +627,3 @@ number1++
 
 
 client.login(process.env.token);
-
