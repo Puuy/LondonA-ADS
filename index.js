@@ -21,7 +21,7 @@ client.on("ready", () => {
   client.user.setActivity(`Puuy the best`);
   client.user.setStatus("idle");
 });
-const owners = ["455108784579149835", "527826654660132890", "512792862140923905"]
+const owners = ["455108784579149835", "527826654660132890", "512792862140923905", "841847648113917993" ]
 var prefix = "-"; 
 
 client.on("message", async message => {
